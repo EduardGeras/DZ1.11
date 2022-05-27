@@ -25,11 +25,8 @@ public class Main {
 
 
     private static void lists() {
-        int id = 1;
         for (int i = 0; i < list.length; i++) {
-            System.out.print(id);
             System.out.println(list[i]);
-            id++;
         }
     }
 
@@ -42,7 +39,7 @@ public class Main {
     }
 
     private static void minWage() {
-        double salary = 1_000_000;
+        double salary = list[0].getSalary();
         for (int i = 0; i < list.length - 1; i++) {
             if (salary > list[i + 1].getSalary()) {
                 salary = list[i + 1].getSalary();
@@ -55,7 +52,7 @@ public class Main {
         }
     }
     private static void maxWage() {
-        double salary = 0;
+        double salary = list[0].getSalary();
         for (int i = 0; i < list.length - 1; i++) {
             if (salary < list[i + 1].getSalary()) {
                 salary = list[i + 1].getSalary();
